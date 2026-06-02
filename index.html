@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Image Search
+    </title>
+    <style>
+      body {
+        background-color: antiquewhite;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, 
+      }
+      main {
+        display: flex;
+        flex-direction: column;
+      }
+      .search-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .search-row {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .header-name {
+        font-size: 40px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      }
+      .input-bar {
+        font-size: 20px;
+        padding: 10px 20px;
+        width: 400px;
+        border-radius: 30px;
+        border-style: solid;
+        position: relative;
+      }
+      .input-bar-active {
+      }
+      .input-bar-active:focus {
+        outline: none;
+        border: 2px solid rgb(14, 216, 14);
+      }
+      .search-button {
+        top: 30;
+        cursor: pointer;
+        background-color: rgb(23, 232, 159);
+        border: none;
+        padding: 10px 25px;
+        border-radius: 50px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 20px;
+        color: rgb(68, 68, 68);
+      }
+      .show-more-button,
+      .show-much-more-button {
+        background-color: rgb(4, 196, 196);
+        top: 30;
+        cursor: pointer;
+        border: none;
+        padding: 10px 25px;
+        border-radius: 50px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 20px;
+        color: rgb(68, 68, 68);
+      }
+      .show-much-more-button {
+        margin-left: 10px;
+      }
+      .show-more-row {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+      }
+      .search-results-row {
+      margin-top: 30px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 15px;
+      padding: 0 20px;
+      }
+      .img-container {
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+      border-radius: 10px;
+      position: relative;
+      }
+      .img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      }
+      .img-tooltip {
+      position: absolute;
+      background-color:rgba(250, 235, 215, 0.556);
+      font-size: 15px;
+      bottom: 0px;
+      left: 0;
+      right: 0;
+      height: 40%;
+      opacity: 0;
+      transition: opacity 0.20s;
+      }
+      .tool-tip-button-style {
+        border: none;
+        background-color: azure;
+        border-radius: 4px;
+        padding: 10px 5px;
+        text-decoration: none; 
+        margin-right: 10px;
+        color: rgb(1, 31, 31);
+        cursor: pointer;
+      }
+      .tooltip-container {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        justify-content: center
+      }
+      .img-container:hover .img-tooltip{
+        opacity: 1;
+      }
+      .error-stye {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="search-box">
+        <p class="header-name">
+          Image Search App
+        </p>
+        <div class="search-row">
+          <input class="input-bar js-input-bar " placeholder="Search for images ...">
+        </div>
+      </div>
+      <div class="search-results-row js-search-results-row">
+      </div>
+      <div class="show-more-row">
+        <button class="show-more-button js-show-more-button">
+          show more
+        </button>
+        <button class="show-much-more-button js-show-much-more-button">
+          show muchs more
+        </button>
+      </div>
+    </main>
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
