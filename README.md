@@ -1,7 +1,7 @@
 # Unsplash Image Search App
 
 A JavaScript image search application built with the Unsplash API.  
-The project features debounced search, pagination, category filtering, image preview, and direct image download functionality.
+The project features debounced search, pagination, image preview, and direct image download functionality.
 
 ## API Setup
 
